@@ -2,11 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import "./App.css";
 
-let renderCount = 0;
-
 function App() {
-  renderCount++;
-
   const formInstance = useForm({
     mode: "onChange",
     defaultValues: {
@@ -83,7 +79,6 @@ function App() {
               Content
             </label>
             <textarea
-              // type="text"
               cols={40}
               rows={5}
               className="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -115,9 +110,6 @@ function App() {
             >
               Create Post
             </button>
-            <div className="w-40 p-2 text-center text-sm bg-red-600 text-white rounded-lg">
-              Render count: {renderCount}
-            </div>
           </div>
         </form>
       </div>
